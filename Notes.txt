@@ -54,3 +54,9 @@ $ git status
 
 We will see changes again, we can commit or restore this, to restore run:
 $ git restore README.md
+
+Now add another txt file and change README, run git status, then:
+$ git add .
+Instead of writing name of a particular file, it will automatically take all files needing of commit
+
+rest all steps are same
