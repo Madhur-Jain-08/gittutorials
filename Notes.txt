@@ -63,3 +63,14 @@ rest all steps are same
 
 To clone the Repository:
 $ git clone {link of repo from GitHub service}
+
+To restore after git add .:
+$ git restore --staged "New Text Document (2).txt"
+
+We can also use:
+$ git reset "New Text Document (2).txt"
+It also works similar to restore command
+
+To check the files that are added but not committed to the staged
+$ git diff --staged
+Running this command after committing will give nothing as everything is moved to the staging environment
