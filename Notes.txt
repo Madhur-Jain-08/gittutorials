@@ -1,0 +1,56 @@
+Go to the desired location(folder) using:
+cd {PATH}
+
+Initialise the Git in a particular Folder using:
+git init
+
+Make sure that when it is initializing, it also creates hidden folder named .git and this need not get committed in the GitHub repository.
+
+
+The first thing you should do when you install Git is to set your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating:
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+NOTE: I have already done this part, it is just for knowledge
+
+Now, if we check status using:
+$ git status
+we get to know that there are untracked files
+
+After executing:
+$ git add README.md
+this file will get tracked, we can check the status now
+
+Again using:
+$ git status
+now, we get to now that these are the files that need to be committed to the staging environment
+
+$ git commit -m "Any message you wanna write"
+Will now move to the staging environment
+
+Again using:
+$ git status
+now, whatever we have to commit is already there in the staging environment
+
+To check the Branch:
+$ git branch
+
+To change Master branch to main branch
+$ git branch -M main
+
+To tell it that from our local repository to the location where we need to commit:
+$ git remote add origin {link shown in GitHub service}
+
+To see: currently in local, from where we are fetching:
+$ git remote -v
+
+Now we will push using:
+$ git push origin main
+
+Now Reload the GitHub page, we will see the files
+
+Now do some changes in README.md file and run:
+$ git status
+
+We will see changes again, we can commit or restore this, to restore run:
+$ git restore README.md
